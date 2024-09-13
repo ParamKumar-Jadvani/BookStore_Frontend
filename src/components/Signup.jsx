@@ -21,7 +21,10 @@ const Signup = () => {
       email: data.email,
       password: data.password,
     };
-    const res = await axios.post("http://localhost:3118/user/signup", userInfo);
+    const res = await axios.post(
+      "https://bookstore-backend-q9sc.onrender.com/user/signup",
+      userInfo
+    );
 
     if (res.data) {
       toast.success("Sign-up Successful!");
